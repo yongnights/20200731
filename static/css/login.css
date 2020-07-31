@@ -1,0 +1,31 @@
+﻿body {
+    background-color:black
+}
+#box{
+    position: absolute;
+    left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+    width:25%;
+    height:350px;
+    background-color:white;
+}
+#login{
+    font-size:28px;
+    font-family:'Bradley Hand ITC';
+    line-height:60px;
+    width:290px;
+    text-align:center
+}
+#table{
+    margin-left:20px;
+}
+#table tr{
+    font-family:'Times New Roman', Times, serif;
+    font-size:15px;
+}
+#buttons{
+    margin-left:115px;
+    width:70px;
+    height:30px;
+}

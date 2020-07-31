@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="{{ url_for('static',filename='css/login.css') }}" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="box">
+    <center>
+        <p id="login">register</p>
+        <form action="/register" method="post">
+            <div>
+                <p>
+                    email:<input type="text" name="email"/>
+                </p>
+                <p>
+                    username:<input type="text" name="username"/>
+                </p>
+
+                <p>
+                    password:<input type="password" name="password"/>
+                </p>
+                <p>
+                    confirm password:<input type="password" name="pass_confirm"/>
+                </p>
+                <p>
+                    <input id=reg type="submit" value="Register"/>
+                </p>
+                {#                <p>#}
+                {#                    <a href="/login">#}
+                {#                        <button>login</button>#}
+                {#                    </a>#}
+                {#                </p>#}
+
+            </div>
+        </form>
+        <p>
+            <a href="/">
+                <button>go home</button>
+            </a>
+        </p>
+    </center>
+</div>
+
+</body>
+</html>

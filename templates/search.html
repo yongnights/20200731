@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Seach</title>
+    <link href="{{ url_for('static',filename='css/searchstyle.css') }}" rel="stylesheet" type="text/css"/>
+    {#    <script type="text/javascript" src="{{ url_for('static',filename='js/searchScript.js') }}"></script>#}
+</head>
+<body>
+
+
+
+<div class='box'>
+    <div class='logo'>
+        <ul>
+            <li id="logo_img"><img src="{{ url_for('static',filename='pictures/logo.png') }}" alt="logo_picture"
+                                   width="35" height="35"></li>
+            <li id="logo1"><a href="/">GreatTaste</a></li>
+        </ul>
+    </div>
+    <div class='nav' style="color:papayawhip;">
+        <div class="nav1">
+            <h1>Catalogue</h1>
+            <details>
+                <summary>Fruit</summary>
+
+                <button style="width:60px;height:30px;" id="ingredient1" value="banana" onclick="serch1();"
+                        type="submit">banana
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient2" value="apple" onclick="serch2();"
+                        type="submit">apple
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient3" value="avocado" onclick="serch3();"
+                        type="submit">avocado
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient4" value="strawberry" onclick="serch4();"
+                        type="submit">strawberry
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient5" value="cherry" onclick="serch5();"
+                        type="submit">cherry
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient6" value="durian" onclick="serch6();"
+                        type="submit">durian
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient7" value="coconut" onclick="serch7();"
+                        type="submit">coconut
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient8" value="grape" onclick="serch8();"
+                        type="submit">grape
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient9" value="lemon" onclick="serch9();"
+                        type="submit">lemon
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient10" value="kiwi" onclick="serch10();"
+                        type="submit">kiwi
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient11" value="lychee" onclick="serch11();"
+                        type="submit">lychee
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient12" value="mango" onclick="serch12();"
+                        type="submit">mango
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient13" value="mangosteen" onclick="serch13();"
+                        type="submit">mangosteen
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient14" value="peach" onclick="serch14();"
+                        type="submit">peach
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient15" value="orange" onclick="serch15();"
+                        type="submit">orange
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient16" value="pear" onclick="serch16();"
+                        type="submit">pear
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient17" value="pineapple" onclick="serch17();"
+                        type="submit">pineapple
+                </button>
+
+            </details>
+            <details>
+                <summary>Vegetable</summary>
+
+                <button style="width:60px;height:30px;" id="ingredient1" value="leek" onclick="serch1();"
+                        type="submit">leek
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient2" value="cabbage" onclick="serch2();"
+                        type="submit">cabbage
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient3" value="caraway" onclick="serch3();"
+                        type="submit">caraway
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient4" value="spinach" onclick="serch4();"
+                        type="submit">spinach
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient5" value="celery" onclick="serch5();"
+                        type="submit">celery
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient6" value="cress" onclick="serch6();"
+                        type="submit">cress
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient7" value="cauliflower" onclick="serch7();"
+                        type="submit">cauliflower
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient8" value="lettuce" onclick="serch8();"
+                        type="submit">lettuce
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient9" value="romaine" onclick="serch9();"
+                        type="submit">romaine
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient10" value="rape" onclick="serch10();"
+                        type="submit">rape
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient11" value="tomato" onclick="serch11();"
+                        type="submit">tomato
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient12" value="patato" onclick="serch12();"
+                        type="submit">patato
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient13" value="greens" onclick="serch13();"
+                        type="submit">greens
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient14" value="tarragon" onclick="serch14();"
+                        type="submit">tarragon
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient15" value="turnip" onclick="serch15();"
+                        type="submit">turnip
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient16" value="carrot" onclick="serch16();"
+                        type="submit">carrot
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient17" value="summer radish" onclick="serch17();"
+                        type="submit">summer radish
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient18" value="water shield" onclick="serch18();"
+                        type="submit">water shield
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient19" value="kale" onclick="serch19();"
+                        type="submit">kale
+                </button>
+
+            </details>
+            <details>
+                <summary>Meat</summary>
+
+                <button style="width:60px;height:30px;" id="ingredient1" value="whelk" onclick="serch1();"
+                        type="submit">
+                    whelk
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient2" value="pomfret" onclick="serch2();"
+                        type="submit">pomfret
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient3" value="abalone" onclick="serch3();"
+                        type="submit">abalone
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient4" value="scallop" onclick="serch4();"
+                        type="submit">scallop
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient5" value="lobster" onclick="serch5();"
+                        type="submit">lobster
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient6" value="oyster" onclick="serch6();"
+                        type="submit">oyster
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient7" value="fishball" onclick="serch7();"
+                        type="submit">fishball
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient8" value="sausage" onclick="serch8();"
+                        type="submit">sausage
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient9" value="drumstick" onclick="serch9();"
+                        type="submit">drumstick
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient10" value="gigot" onclick="serch10();"
+                        type="submit">gigot
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient11" value="lamb chop" onclick="serch11();"
+                        type="submit">lamb chop
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient12" value="venison" onclick="serch12();"
+                        type="submit">venison
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient13" value="mutton" onclick="serch13();"
+                        type="submit">mutton
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient14" value="sirloin" onclick="serch14();"
+                        type="submit">sirloin
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient15" value="steak" onclick="serch15();"
+                        type="submit">steak
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient16" value="gristle" onclick="serch16();"
+                        type="submit">gristle
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient17" value="sinew" onclick="serch17();"
+                        type="submit">sinew
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient18" value="beef" onclick="serch18();"
+                        type="submit">beef
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient19" value="pettitoes" onclick="serch19();"
+                        type="submit">pettitoes
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient20" value="chop" onclick="serch20();"
+                        type="submit">chop
+                </button>
+
+
+                <button style="width:60px;height:30px;" id="ingredient21" value="pork" onclick="serch21();"
+                        type="submit">pork
+                </button>
+
+            </details>
+
+        </div>
+    </div>
+
+    <div class='main' style="width: 520px;height: 360px;margin-left: 20px;margin-top: 30px">
+        <form action="/results" method="POST">
+            <ul type='none' style="text-align:center;font-size:30px;margin-left:50px;margin-top:100px;">
+                <input type="text" id="searchbox" style="text-align:center;width:80%;height:30px;" class="aa" name="select">
+                <input type="submit" style="width:60px;height:30px" value="search" class="bb">
+            </ul>
+        </form>
+        <script type="text/javascript">
+                function serch1() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient1').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient1').value
+                    }
+                }
+
+                function serch2() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient2').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient2').value
+                    }
+                }
+
+                function serch3() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient3').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient3').value
+                    }
+                }
+
+                function serch4() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient4').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient4').value
+                    }
+                }
+
+                function serch5() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient5').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient5').value
+                    }
+                }
+
+                function serch6() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient6').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient6').value
+                    }
+                }
+
+                function serch7() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient7').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient7').value
+                    }
+                }
+
+                function serch8() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient8').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient8').value
+                    }
+                }
+
+                function serch9() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient9').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient9').value
+                    }
+                }
+
+                function serch10() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient10').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient10').value
+                    }
+                }
+
+                function serch11() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient11').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient11').value
+                    }
+                }
+
+                function serch12() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient12').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient12').value
+                    }
+                }
+
+                function serch13() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient13').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient13').value
+                    }
+                }
+
+                function serch14() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient14').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient14').value
+                    }
+                }
+
+                function serch15() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient15').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient15').value
+                    }
+                }
+
+                function serch16() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient16').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient16').value
+                    }
+                }
+
+                function serch17() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient17').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient17').value
+                    }
+                }
+
+                function serch18() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient18').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient18').value
+                    }
+                }
+
+                function serch19() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient19').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient19').value
+                    }
+                }
+
+                function serch20() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient20').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient20').value
+                    }
+                }
+
+                function serch21() {
+                    var s = document.getElementById('searchbox').value
+                    if (s.length == 0) {
+                        document.getElementById('searchbox').value = s + document.getElementById('ingredient21').value
+                    } else {
+                        document.getElementById('searchbox').value = s + "," + document.getElementById('ingredient21').value
+                    }
+                }
+            </script>
+    </div>
+
+</div>
+
+<div class="footer" style="color: white;text-align: center">
+
+    __________________________________________________________________________________________________________________<br><br>
+    Email: new_group@gmail.com<br>
+    International: +61 4 1234 5678<br>
+    Page last updated Wednesday 27 May 2020<br>
+    UNSW CRICOS Provider Code 00098G, ABN 57 195 873 179 | Sydney, NSW.2052, Australia<br>
+
+</div>
+
+</body>
+</html>
