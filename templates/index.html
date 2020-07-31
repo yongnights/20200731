@@ -15,14 +15,6 @@
                                    width="35" height="35"></li>
             <li id="logo1"><a href="/" id="1">GreatTaste</a></li>
             <li id="logo2"><a href="/" id="1">Welcome</a></li>
-            <li id="logo3"><a href="/search" id="2">Search</a></li>
-{#            <li id="logo4"><a href="/create" id="2">Create</a></li>#}
-            <li id="logo5"><a href="/video" id="3">Video</a></li>
-            <li id="logo5" id="4">
-                {% if session.get('username') %}
-                    <a href="/account">account</a>
-                {% endif %}
-            </li>
             <li id="logo5" id="4">
                 {% if session.get('username') %}
                     <a href="/logout">logout</a>
@@ -57,13 +49,6 @@
     <a href="javascript:;" id="next" class="arrow">&gt;</a>  <!--向右-->
 </div>
 
-{#<div class="search">#}
-{#    <form action="demo-form.php">#}
-{#        <input type="text" id="input" placeholder="egg" autofocus="autofocus">#}
-{#        <button type="submit" id="button1"></button>#}
-{#    </form>#}
-{#</div>#}
-
 <div class="recipe">
     <div class="recipe1">
         <img src="{{ url_for('static',filename='pictures/recipe1.jpg') }}" id="searchimg">
@@ -80,50 +65,6 @@
         </p>
     </div>
 </div>
-<div class="recipe">
-    <div class="recipe1">
-        <img src="{{ url_for('static',filename='pictures/recipe1.jpg') }}" id="searchimg">
-    </div>
-    <div class="recipe2">
-        <h2><a>London</a></h2>
-        <p>
-            London is the capital city of England. It is the most populous city in the United Kingdom,
-            with a metropolitan area of over 13 million inhabitants.
-        </p>
-        <p>
-            Standing on the River Thames, London has been a major settlement for two millennia,
-            its history going back to its founding by the Romans, who named it Londinium.
-        </p>
-    </div>
-</div>
-
-<div class="recipe">
-    <div class="recipe1">
-        <img src="{{ url_for('static',filename='pictures/recipe1.jpg') }}" id="searchimg">
-    </div>
-    <div class="recipe2">
-        <h2><a>London</a></h2>
-        <p>
-            London is the capital city of England. It is the most populous city in the United Kingdom,
-            with a metropolitan area of over 13 million inhabitants.
-        </p>
-        <p>
-            Standing on the River Thames, London has been a major settlement for two millennia,
-            its history going back to its founding by the Romans, who named it Londinium.
-        </p>
-    </div>
-</div>
-
-<div class="footer">
-    <p>
-        __________________________________________________________________________________________________________________<br><br>
-        Email: new_group@gmail.com<br>
-        International: +61 4 1234 5678<br>
-        Page last updated Wednesday 27 May 2020<br>
-        UNSW CRICOS Provider Code 00098G, ABN 57 195 873 179 | Sydney, NSW.2052, Australia<br>
-    </p>
-</div>
-
 
 </body>
 </html>
